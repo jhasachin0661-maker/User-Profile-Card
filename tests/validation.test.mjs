@@ -27,6 +27,8 @@ function validateField(field, value) {
       if (trimmed && !EMAIL_PATTERN.test(trimmed)) return 'Please enter a valid email address';
       return null;
     case 'imageUrl':
+      if (trimmed && !trimmed.startsWith('data:image/') && !URL_PATTERN.test(trimmed)) return 'Please provide a valid image file or URL (http:// or https://)';
+      return null;
     case 'website':
     case 'linkedin':
     case 'github':
@@ -62,8 +64,15 @@ test('Validation: Email field', () => {
   assert.equal(validateField('email', 'not-an-email'), 'Please enter a valid email address');
 });
 
-test('Validation: URL fields (imageUrl, website, linkedin, github)', () => {
-  for (const field of ['imageUrl', 'website', 'linkedin', 'github']) {
+test('Validation: Image field accepts data:image and http(s) URLs', () => {
+  assert.equal(validateField('imageUrl', ''), null);
+  assert.equal(validateField('imageUrl', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='), null);
+  assert.equal(validateField('imageUrl', 'https://example.com/avatar.jpg'), null);
+  assert.equal(validateField('imageUrl', 'invalid-string') !== null, true);
+});
+
+test('Validation: URL fields (website, linkedin, github)', () => {
+  for (const field of ['website', 'linkedin', 'github']) {
     assert.equal(validateField(field, ''), null);
     assert.equal(validateField(field, 'https://example.com'), null);
     assert.equal(validateField(field, 'http://example.com/profile'), null);
@@ -71,3 +80,4 @@ test('Validation: URL fields (imageUrl, website, linkedin, github)', () => {
     assert.equal(validateField(field, 'javascript:alert(1)') !== null, true);
   }
 });
+

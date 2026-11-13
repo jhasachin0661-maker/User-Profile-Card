@@ -44,8 +44,8 @@ export function validateField(field: keyof Profile, value: string): string | nul
       return null;
 
     case 'imageUrl':
-      if (trimmed && !URL_PATTERN.test(trimmed)) {
-        return 'Image URL must start with http:// or https://';
+      if (trimmed && !trimmed.startsWith('data:image/') && !URL_PATTERN.test(trimmed)) {
+        return 'Please provide a valid image file or URL (http:// or https://)';
       }
       return null;
 
@@ -79,3 +79,4 @@ export function isValidProfile(profile: Profile): boolean {
   const errors = validateProfile(profile);
   return Object.keys(errors).length === 0;
 }
+

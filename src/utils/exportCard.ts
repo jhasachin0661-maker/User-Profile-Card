@@ -109,3 +109,4 @@ export async function shareProfile(profile: Profile): Promise<{ shared: boolean;
   const copied = await copyProfileDetails(profile);
   return { shared: false, fallbackCopied: copied };
 }
+

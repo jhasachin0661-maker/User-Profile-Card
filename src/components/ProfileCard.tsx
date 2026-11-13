@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Profile, Appearance, ThemeType, CornerRadius, FontStyle } from '../types/profile';
 import { MapPin, Mail, Globe, Sparkles, ShieldCheck, User } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './SocialIcons';
@@ -15,6 +15,10 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   cardId = 'profile-card',
 }) => {
   const [imageError, setImageError] = useState(false);
+
+  useEffect(() => {
+    setImageError(false);
+  }, [profile.imageUrl]);
 
   const { theme, template, corners, fontStyle } = appearance;
 
@@ -154,7 +158,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
           <img
             src={profile.imageUrl}
             alt={displayName}
-            crossOrigin="anonymous"
+            crossOrigin={profile.imageUrl.startsWith('data:') ? undefined : 'anonymous'}
             className="w-full h-full object-cover"
             onError={() => setImageError(true)}
           />
