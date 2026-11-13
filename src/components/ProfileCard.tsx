@@ -101,6 +101,108 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
           watermark: 'text-[#E2DDD2]',
           avatarRing: 'ring-[#A86542]',
         };
+      case 'midnight':
+        return {
+          cardBg: 'bg-[#0B132B]',
+          cardBorder: 'border-[#1D2D50]',
+          textPrimary: 'text-[#F8FAFC]',
+          textSecondary: 'text-[#94A3B8]',
+          textMuted: 'text-[#64748B]',
+          accentText: 'text-[#E2B874]',
+          accentBg: 'bg-[#E2B874]',
+          accentBorder: 'border-[#E2B874]/30',
+          chipBg: 'bg-[#132247] hover:bg-[#1A2E5E]',
+          chipBorder: 'border-[#243B73]',
+          chipText: 'text-[#E2E8F0]',
+          divider: 'border-[#1D2D50]',
+          watermark: 'text-[#132247]',
+          avatarRing: 'ring-[#E2B874]',
+        };
+      case 'bordeaux':
+        return {
+          cardBg: 'bg-[#240B13]',
+          cardBorder: 'border-[#421624]',
+          textPrimary: 'text-[#FDF2F4]',
+          textSecondary: 'text-[#D4A3AE]',
+          textMuted: 'text-[#9C6D7A]',
+          accentText: 'text-[#E5989B]',
+          accentBg: 'bg-[#E5989B]',
+          accentBorder: 'border-[#E5989B]/30',
+          chipBg: 'bg-[#381420] hover:bg-[#481B2B]',
+          chipBorder: 'border-[#562234]',
+          chipText: 'text-[#FCE7EB]',
+          divider: 'border-[#421624]',
+          watermark: 'text-[#381420]',
+          avatarRing: 'ring-[#E5989B]',
+        };
+      case 'emerald':
+        return {
+          cardBg: 'bg-[#0A2016]',
+          cardBorder: 'border-[#173D2C]',
+          textPrimary: 'text-[#F0FDF4]',
+          textSecondary: 'text-[#86EFAC]',
+          textMuted: 'text-[#4ADE80]/80',
+          accentText: 'text-[#D4AF37]',
+          accentBg: 'bg-[#D4AF37]',
+          accentBorder: 'border-[#D4AF37]/30',
+          chipBg: 'bg-[#123324] hover:bg-[#1A4532]',
+          chipBorder: 'border-[#23573F]',
+          chipText: 'text-[#DCFCE7]',
+          divider: 'border-[#173D2C]',
+          watermark: 'text-[#123324]',
+          avatarRing: 'ring-[#D4AF37]',
+        };
+      case 'monochrome':
+        return {
+          cardBg: 'bg-[#09090B]',
+          cardBorder: 'border-[#27272A]',
+          textPrimary: 'text-[#FAFAFA]',
+          textSecondary: 'text-[#A1A1AA]',
+          textMuted: 'text-[#71717A]',
+          accentText: 'text-[#E4E4E7]',
+          accentBg: 'bg-[#FAFAFA]',
+          accentBorder: 'border-[#FAFAFA]/40',
+          chipBg: 'bg-[#18181B] hover:bg-[#27272A]',
+          chipBorder: 'border-[#3F3F46]',
+          chipText: 'text-[#F4F4F5]',
+          divider: 'border-[#27272A]',
+          watermark: 'text-[#18181B]',
+          avatarRing: 'ring-[#FAFAFA]',
+        };
+      case 'terracotta':
+        return {
+          cardBg: 'bg-[#2D1610]',
+          cardBorder: 'border-[#4A261D]',
+          textPrimary: 'text-[#FBF5F0]',
+          textSecondary: 'text-[#DDB8A8]',
+          textMuted: 'text-[#A88274]',
+          accentText: 'text-[#E08A56]',
+          accentBg: 'bg-[#E08A56]',
+          accentBorder: 'border-[#E08A56]/30',
+          chipBg: 'bg-[#3E211A] hover:bg-[#502B22]',
+          chipBorder: 'border-[#61362B]',
+          chipText: 'text-[#F5EBE1]',
+          divider: 'border-[#4A261D]',
+          watermark: 'text-[#3E211A]',
+          avatarRing: 'ring-[#E08A56]',
+        };
+      case 'amethyst':
+        return {
+          cardBg: 'bg-[#1A1028]',
+          cardBorder: 'border-[#33224D]',
+          textPrimary: 'text-[#FAF5FF]',
+          textSecondary: 'text-[#C4B5FD]',
+          textMuted: 'text-[#8B5CF6]/80',
+          accentText: 'text-[#E9D5FF]',
+          accentBg: 'bg-[#C084FC]',
+          accentBorder: 'border-[#C084FC]/30',
+          chipBg: 'bg-[#291B3E] hover:bg-[#382654]',
+          chipBorder: 'border-[#473268]',
+          chipText: 'text-[#F3E8FF]',
+          divider: 'border-[#33224D]',
+          watermark: 'text-[#291B3E]',
+          avatarRing: 'ring-[#C084FC]',
+        };
     }
   };
 

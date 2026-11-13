@@ -44,6 +44,54 @@ const THEMES: { id: ThemeType; name: string; bg: string; text: string; accent: s
     accent: '#A86542',
     border: '#D8D2C6',
   },
+  {
+    id: 'midnight',
+    name: 'Midnight',
+    bg: '#0B132B',
+    text: '#F8FAFC',
+    accent: '#E2B874',
+    border: '#1D2D50',
+  },
+  {
+    id: 'bordeaux',
+    name: 'Bordeaux',
+    bg: '#240B13',
+    text: '#FDF2F4',
+    accent: '#E5989B',
+    border: '#421624',
+  },
+  {
+    id: 'emerald',
+    name: 'Alpine Forest',
+    bg: '#0A2016',
+    text: '#F0FDF4',
+    accent: '#D4AF37',
+    border: '#173D2C',
+  },
+  {
+    id: 'monochrome',
+    name: 'Noir Mono',
+    bg: '#09090B',
+    text: '#FAFAFA',
+    accent: '#E4E4E7',
+    border: '#27272A',
+  },
+  {
+    id: 'terracotta',
+    name: 'Terracotta',
+    bg: '#2D1610',
+    text: '#FBF5F0',
+    accent: '#E08A56',
+    border: '#4A261D',
+  },
+  {
+    id: 'amethyst',
+    name: 'Royal Plum',
+    bg: '#1A1028',
+    text: '#FAF5FF',
+    accent: '#C084FC',
+    border: '#33224D',
+  },
 ];
 
 const CORNERS: { id: CornerRadius; label: string; previewClass: string }[] = [
@@ -73,7 +121,7 @@ export const ThemeSelector: React.FC<ThemeSelectorProps> = ({
         <label className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-muted mb-2.5">
           <Palette className="w-3.5 h-3.5 text-brass" /> Color Theme
         </label>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">
           {THEMES.map((theme) => {
             const isSelected = currentTheme === theme.id;
             return (

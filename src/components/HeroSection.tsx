@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Sparkles, ShieldCheck, Zap, Download } from 'lucide-react';
+import { ArrowDown, Sparkles, Zap, Download, Palette } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   const scrollToEditor = () => {
@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brass/40 bg-brass/10 mb-6 text-obsidian shadow-xs">
           <Sparkles className="w-3.5 h-3.5 text-brass" />
           <span className="text-xs font-mono font-semibold uppercase tracking-wider">
-            Obsidian Editorial Edition • 100% Client-Side
+            Obsidian Editorial Edition • 10 Curated Themes
           </span>
         </div>
 
@@ -32,26 +32,19 @@ export const HeroSection: React.FC = () => {
         {/* Subtitle */}
         <p className="mt-6 text-base sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed font-normal">
           Transform your personal and professional profile into an exquisite, customizable digital card.
-          Zero accounts, zero backend processing, 100% privacy-first in your browser.
+          Choose your layout, upload your photo, customize typography, and export high-resolution PNGs.
         </p>
 
-        {/* CTAs */}
-        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        {/* CTA */}
+        <div className="mt-9 flex items-center justify-center">
           <button
             type="button"
             onClick={scrollToEditor}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-obsidian hover:bg-obsidian-light text-ivory font-semibold text-sm transition-all shadow-md hover:shadow-xl group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-obsidian hover:bg-obsidian-light text-ivory font-semibold text-sm transition-all shadow-md hover:shadow-xl group"
           >
             <span>Start Designing Now</span>
             <ArrowDown className="w-4 h-4 text-brass group-hover:translate-y-0.5 transition-transform" />
           </button>
-
-          <a
-            href="#features"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-[#D5CDBC] bg-white/70 hover:bg-white text-ink font-medium text-sm transition-colors shadow-xs"
-          >
-            Explore Specifications
-          </a>
         </div>
 
         {/* Three Value Pillars */}
@@ -62,17 +55,17 @@ export const HeroSection: React.FC = () => {
               <span>Real-Time Preview</span>
             </div>
             <p className="text-xs text-muted leading-relaxed">
-              Every keystroke formats instantly onto your choice of 3 architectural layouts and 4 color schemes.
+              Every keystroke and photo upload updates instantly on your choice of 3 architectural layouts.
             </p>
           </div>
 
           <div className="p-4 rounded-xl border border-[#DDD6C8] bg-white/50 backdrop-blur-xs">
             <div className="flex items-center gap-2 text-obsidian font-serif font-bold text-sm mb-1">
-              <ShieldCheck className="w-4 h-4 text-brass" />
-              <span>Zero-Backend Privacy</span>
+              <Palette className="w-4 h-4 text-brass" />
+              <span>10 Color Themes</span>
             </div>
             <p className="text-xs text-muted leading-relaxed">
-              No servers, no tracking cookies, and no database. Your personal info never leaves your local memory.
+              Explore 10 bespoke color palettes ranging from Obsidian & Warm Ivory to Midnight Royal and Wine Bordeaux.
             </p>
           </div>
 
@@ -82,7 +75,7 @@ export const HeroSection: React.FC = () => {
               <span>Retina 2x Export</span>
             </div>
             <p className="text-xs text-muted leading-relaxed">
-              Export ultra-crisp PNG images ready for social avatars, email signatures, resume attachments, and print.
+              Export ultra-crisp 2x PNG images ready for social avatars, email signatures, portfolio cards, and print.
             </p>
           </div>
         </div>
@@ -90,4 +83,3 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
-

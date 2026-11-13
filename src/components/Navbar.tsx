@@ -36,8 +36,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onLoadSample, storageActive }) =
             <a href="#editor-workspace" className="hover:text-obsidian transition-colors">
               Editor
             </a>
-            <a href="#features" className="hover:text-obsidian transition-colors">
-              Features
+            <a href="#editor-workspace" className="hover:text-obsidian transition-colors">
+              Palettes
             </a>
             <a href="#privacy" className="hover:text-obsidian transition-colors">
               Privacy

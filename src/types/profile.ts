@@ -10,7 +10,17 @@ export interface Profile {
   github?: string;
 }
 
-export type ThemeType = 'obsidian' | 'ivory' | 'charcoal' | 'sand';
+export type ThemeType =
+  | 'obsidian'
+  | 'ivory'
+  | 'charcoal'
+  | 'sand'
+  | 'midnight'
+  | 'bordeaux'
+  | 'emerald'
+  | 'monochrome'
+  | 'terracotta'
+  | 'amethyst';
 
 export type TemplateType = 'editorial' | 'classic' | 'compact';
 
