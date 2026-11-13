@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-obsidian: #17251F;
+    --color-ivory: #F2EBDD;
+    --color-brass: #B99A6A;
+    --color-ink: #202622;
+    --color-muted: #68716B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F8F5EE;
+    color: #202622;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom subtle focus styles */
+  :focus-visible {
+    outline: 2px solid #B99A6A;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(185, 154, 106, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 154, 106, 0.6);
+}
+
+/* Print or snapshot optimizations */
+#profile-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
